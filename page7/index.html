@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Exercise 7</title>
+    </head>
+    <body>
+        <!--Creates text box with the text "Enter your name" inside-->
+        <input id="name-input" type="text" placeholder="Enter your name" />
+        <!--Creates "Click me" button beside text box-->
+        <button id="my-button">Click Me</button>
+
+        <script>
+            //Creates variables to match interactables in website
+            var myButton = document.querySelector('#my-button');
+            var nameInput = document.querySelector('#name-input');
+
+            //Listen (track) for a click on the button
+            myButton.addEventListener('click', function () {
+                //If user inputs name, outputs "Hello" with the name after it.
+                if (nameInput.value !== '') {
+                    alert('Hello ' + nameInput.value);
+                }
+            });
+        </script>
+    </body>
+</html>
